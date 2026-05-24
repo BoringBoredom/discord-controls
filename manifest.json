@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Discord Controls",
+  "version": "1.0.0",
+  "description": "Global Chrome extension shortcuts that toggle Discord mute and deafen controls in the most recently used Discord tab.",
+  "permissions": ["scripting"],
+  "host_permissions": ["https://discord.com/*"],
+  "background": { "service_worker": "background.js" },
+  "commands": {
+    "toggle-mute": { "description": "Toggle Mute", "global": true },
+    "toggle-deafen": { "description": "Toggle Deafen", "global": true }
+  }
+}
