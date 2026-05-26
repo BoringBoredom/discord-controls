@@ -1,3 +1,5 @@
+const DEBOUNCE_MS = 200;
+
 const commands = {
   "toggle-mute": { label: "Mute", lastCommandAt: 0 },
   "toggle-deafen": { label: "Deafen", lastCommandAt: 0 },
@@ -20,7 +22,7 @@ async function handleCommand(command) {
   }
 
   const now = Date.now();
-  if (now - commandState.lastCommandAt < 250) {
+  if (now - commandState.lastCommandAt < DEBOUNCE_MS) {
     return;
   }
 
