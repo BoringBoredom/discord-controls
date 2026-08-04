@@ -31,5 +31,6 @@ jobs:
         run: |
           gh release create "$VERSION" \
             "discord-controls-$VERSION.zip" \
-            --title "Discord Controls $VERSION" \
-            --generate-notes
+            --title "$VERSION" \
+            --generate-notes \
+            --target "$GITHUB_SHA"
